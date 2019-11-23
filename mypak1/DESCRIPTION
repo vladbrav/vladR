@@ -1,0 +1,16 @@
+Package: mypak1
+Type: Package
+Title: Provides an easy way to create 3 different AFT models
+Version: 0.1.0
+Author: Vlad
+Maintainer: The package maintainer <vladbrav@yahoo.com>
+Description: provides 3 functions. "AFTexp" creates an exponential AFT model. "AFTweib" creates a weibull AFT model."AFTlog" creates a log-logistic AFT model.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.0
+Imports: survival
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

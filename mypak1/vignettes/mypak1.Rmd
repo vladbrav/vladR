@@ -1,0 +1,40 @@
+---
+title: "mypak1"
+author: VladB
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mypak1}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mypak1)
+```
+## package description
+This package has 3 shortcut functions to creating an AFT survival model, using the time, survival status, predictor of interest, and dataset as the inputs. AFTexp creates an exponential model, AFTweib creates a weibull model, and AFTlog creates a log-logistic model.
+
+## examples of usage
+
+```{r}
+library(survival)
+data(rats)
+mod1 <- AFTexp(rats$time,rats$status,rats$rx,rats)
+mod2 <- AFTweib(rats$time,rats$status,rats$rx,rats)
+mod3 <- AFTlog(rats$time,rats$status,rats$rx,rats)
+```
+
+## examples of output
+
+```{r}
+mod1
+mod2
+mod3
+```
